@@ -2,7 +2,7 @@ body {
     margin: 0;
     padding: 0;
 }
-.container{
+.container1{
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -13,15 +13,11 @@ body {
 }
 .card{
     align-items: center;
-    border: 2px solid salmon;
     background: #FFFFFF 0% 0% no-repeat padding-box;
     box-shadow: 0px 1px 6px #00000029;
     border-radius: 20px;
     width: 500px;
     height: 610px;
-}
-.names{
-    
 }
 .login-text h4{
     color: #000000;
@@ -42,10 +38,7 @@ body {
     color: #000000;
     opacity: 0.5;
 }
-.card-input-1{
-    width: 420px;
-    height: 60px;
-}
+
 .remember{
     display: flex;
     justify-content: space-between;
@@ -62,4 +55,35 @@ body {
 .forget-pass a{
     text-decoration: none;
     cursor: pointer;
+}
+.buttons .btn{
+    color: #FFFFFF;
+    width: 420px;   
+    height: 50px;
+    background: transparent linear-gradient(270deg, #386CB5 0%, #669FED 100%) 0% 0% no-repeat padding-box;
+    box-shadow: 0px 0px 5px #386CB566;
+    border-radius: 6px;
+}
+.buttons{
+    padding-top: 40px;
+}
+.block-3{
+    padding-top: 54px;
+    display: flex;
+    justify-content: space-between;
+}
+.text-center{
+    display: flex;
+    font: normal normal 600 16px/22px Open Sans;
+    align-items: center;
+}
+.block-3 .register-btn{
+    color: #FFFFFF;
+    background: #FEC006 0% 0% no-repeat padding-box;
+    box-shadow: 0px 1px 10px #0000001A;
+    border-radius: 6px;
+}
+.copyright{
+    display: flex;
+    align-items: end;
 }

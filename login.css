@@ -1,0 +1,65 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100vw;
+    height: 100vh;
+    background: transparent url('assets/Bg.jpg') 0% 0% no-repeat padding-box;;
+}
+.card{
+    align-items: center;
+    border: 2px solid salmon;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    box-shadow: 0px 1px 6px #00000029;
+    border-radius: 20px;
+    width: 500px;
+    height: 610px;
+}
+.names{
+    
+}
+.login-text h4{
+    color: #000000;
+    margin-left: 40px;
+    margin-top: 53px;
+    font: normal normal bold 24px/33px Open Sans;
+    letter-spacing: 0px;
+    width: 79px;
+    height: 33px;
+}
+.login-text p{
+    margin-left: 40px;
+    
+    height: 48px;
+    text-align: left;
+    font: normal normal normal 18px/24px Open Sans;
+    letter-spacing: 0px;
+    color: #000000;
+    opacity: 0.5;
+}
+.card-input-1{
+    width: 420px;
+    height: 60px;
+}
+.remember{
+    display: flex;
+    justify-content: space-between;
+}
+.forget-pass{
+    font: normal normal 600 16px/22px Open Sans;
+    letter-spacing: 0px;
+    color: #0974DD;
+
+}
+.password{
+    padding-bottom: 30px;
+}
+.forget-pass a{
+    text-decoration: none;
+    cursor: pointer;
+}

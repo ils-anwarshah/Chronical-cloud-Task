@@ -42,6 +42,7 @@ body {
 
 .remember{
     display: flex;
+    padding-top: 20px;
     justify-content: space-between;
 }
 .remember .form-check-input:checked{
@@ -55,9 +56,9 @@ body {
     color: #0974DD;
 
 }
-.password{
+/* .password{
     padding-bottom: 30px;
-}
+} */
 .forget-pass a{
     text-decoration: none;
     cursor: pointer;
@@ -76,6 +77,8 @@ body {
 } */
 .buttons{
     padding-top: 40px;
+    display: flex;
+    justify-content: center;
 }
 .block-3{
     padding-top: 54px;
@@ -100,7 +103,47 @@ body {
     width: 500px;
     height: 38px;
 }
-
+.input-icon{
+    position: relative;
+    top: 20px;
+}
+input:invalid{
+   border-bottom: 2px solid red; 
+}
+.input-box-1{
+    display: flex;
+    border: 1px solid lightgray
+}
+.email-pass-logo{
+    width: 20px;
+    margin: 0px 10px;
+    align-self:center ;
+}
+#floatingInput{
+    border: none;
+    width: 413px;
+}
+#floatingInput:focus{
+    border: none;
+    box-shadow: none;
+    border-bottom:2px solid #0974DD;
+    border-bottom-right-radius:0%;
+    border-bottom-left-radius:0% ;
+}
+#floatingPassword{
+    border: none;
+    width: 368px;
+}
+#floatingPassword:focus{
+    border: none;
+    box-shadow: none;
+    border-bottom:2px solid #0974DD;
+    border-bottom-right-radius:0%;
+    border-bottom-left-radius:0% ;
+}
+.eye-logo:hover{
+    cursor: pointer;
+}
 @media screen and (max-width:1200px) {
     .logo{
         width: 300px;
@@ -115,10 +158,6 @@ body {
         width: 300px;
         
     } */
-    .container1{
-       
-        
-    }
     .card{
         align-items: center;
         width: 80%;
@@ -147,10 +186,32 @@ body {
     justify-content: center;
     flex-wrap: wrap;
    }
+   #floatingInput{
+    width: 55vw;
+    }
+    #floatingPassword{
+    width: 52vw;
+    }
 }
 @media screen and (max-width:400px) {
     .image{
         padding-bottom: 20px;
     }
     
+}
+@media screen and (max-width:610px) {
+    #floatingPassword{
+        width: 48vw;
+    }
+    #floatingInput{
+        width: 52vw;
+    }
+}
+@media screen and (max-width:440px) {
+    #floatingPassword{
+        width: 40vw;
+    }
+    #floatingInput{
+        width: 48vw;
+    }
 }

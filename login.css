@@ -16,13 +16,13 @@ body {
     align-items: center;
     background: #FFFFFF 0% 0% no-repeat padding-box;
     box-shadow: 0px 1px 6px #00000029;
-    border-radius: 20px;
+    border-radius: 20px !important;
     width: 500px;
     height: 610px;
 }
 .login-text h4{
     color: #000000;
-    margin-left: 40px;
+    margin-left: 30px;
     margin-top: 53px;
     font-size: 24px;
     /* font: normal normal bold 24px/33px Open Sans; */
@@ -31,7 +31,7 @@ body {
     height: 33px;
 }
 .login-text p{
-    margin-left: 40px;
+    margin-left: 30px;
     
     height: 48px;
     text-align: left;

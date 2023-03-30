@@ -22,7 +22,7 @@
                 <p>Enter your email address and password to get access your account.</p>
 
             </div>
-            <form>
+            <form name="login-form" onsubmit="return validateForm()" novalidate>
                 <div class="card-input-1">
                     
                         <div class="input-box mb-3">
@@ -30,18 +30,17 @@
                             <img class="Input-icon" src="./assets/email.svg" alt=""/> 
                           </div>
                           <div class="form-floating">
-                            <input type="email" class="form-control" id="floatingInput" placeholder="Email" autofocus required>
+                            <input type="email" name='email' class="form-control" id="floatingInput" placeholder="Email" autofocus required onkeydown="validateForm()">
                             <label for="floatingInput">Email address</label>
                           </div>
                         </div>
-                      
-                    
+                        <b><small id="err" class="err"></small></b>
                     <div class="input-box">
                         <div class="email-pass-logo">
                             <img src="./assets/padlock.svg" alt="" class="pass-icon">
                         </div>
                         <div class="form-floating password">
-                            <input type="password" class="form-control password" id="floatingPassword" placeholder="Password" required>
+                            <input type="password" name="password" class="form-control password" id="floatingPassword" placeholder="Password" required>
                             <label for="floatingPassword">Password</label>
                         </div>
                         <div class="email-pass-logo eye-logo">
@@ -52,20 +51,20 @@
                 </div>
                 <div class="remember">  
                 <div>
-                    <input class="form-check-input shadow-none rounded-circle" type="checkbox" value="" id="defaultCheck1">
+                    <input class="form-check-input shadow-none rounded-circle" name="checkbox" type="checkbox" value="" id="defaultCheck1">
                     <label class="form-check-label" for="defaultCheck1">
                         Remember me
                     </label>
                 </div>
-                    <span class="forget-pass"><a href="#">Forgot Password?</a></span>
+                    <span class="forget-pass"><a href="./forget.html">Forgot Password?</a></span>
                 </div>
                 <div class="buttons">
-                    <button type="button" class="btn">LOGIN</button>
+                    <button type="submit" class="btn">LOGIN</button>
                 </div>
                 <div class="block-3">  
                     
                         <span class="text-center">Don’t have an account?</span>
-                        <button type="button"class="btn register-btn" >REGISTER NOW</button>
+                        <a href="./signup.html"><button type="button"class="btn register-btn" >REGISTER NOW</button></a>
                 </div>
             
             </form>
@@ -73,5 +72,6 @@
         <p class="copyright">© 2023 All rights reserved | Built for Chronicle Cloud. <br/><strong>Powered with Synapse Xtreme Engine (SXE)</strong></p>
     </div>
     </div>
+    <script src="login.js"></script>
 </body>
 </html>

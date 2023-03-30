@@ -16,10 +16,20 @@ body {
     align-items: center;
     background: #FFFFFF 0% 0% no-repeat padding-box;
     box-shadow: 0px 1px 6px #00000029;
-    border-radius: 20px;
+    border-radius: 20px !important;
     width: 525px;
     height: 360px;
 }
+.err{
+    color: red;
+    font-size: smaller;
+    position: relative;
+    bottom: 18px;
+    left: 12px;
+}
+
+
+
 .login-text h4{
     color: #000000;
     margin-left: 40px;

@@ -12,6 +12,10 @@ body {
     height: 100vh;
     
 }
+.btn-s2:hover{
+    font-weight: bold;
+
+}
 .steps-box{
     display: flex;
     justify-content: space-around;
@@ -30,6 +34,9 @@ body {
     border-bottom: 5px solid #386CB5;
     border-radius: 2px;
 }
+.form-floating>label{
+    top:-4px !important;
+}
 
 .name-box{
     display: flex;
@@ -39,7 +46,7 @@ body {
     
 }
 .step-1{
-    display: none !important;
+    /* display: none !important;  */
     align-items: center;
     background: #FFFFFF 0% 0% no-repeat padding-box;
     box-shadow: 0px 1px 6px #00000029;
@@ -49,7 +56,6 @@ body {
     overflow-x: auto;
 }
 .step-2{
-    /* display: none !important; */
     align-items: center;
     background: #FFFFFF 0% 0% no-repeat padding-box;
     box-shadow: 0px 1px 6px #00000029;
@@ -57,6 +63,9 @@ body {
     width: 500px;
     height: 650px;
     overflow-x: auto;
+}
+.card-hide{
+    display: none !important;
 }
 .card::-webkit-scrollbar {
     display: none;
@@ -71,6 +80,7 @@ body {
     width: 250px;
     height: 33px;
 }
+
 .login-text {
     align-self: flex-start;
     margin-left: 39px;
@@ -78,7 +88,6 @@ body {
 }
 
 .remember{
-    display: flex;
     margin-top: 20px;
     width: 415px;
 }
@@ -168,9 +177,9 @@ body {
     width: 500px;
     height: 38px;
 }
-input:invalid{
+/* input:invalid{
    border-bottom: 2px solid red; 
-}
+} */
 .input-box{
     display: flex;
     border: 1px solid #DDDDDD;
@@ -181,6 +190,10 @@ input:invalid{
     margin: 0px 10px;
     align-self:center ;
 }
+.Paas-text{
+    margin-bottom: 0px;
+}
+
 #rem-text{
     font-size: small;
     color: #000000;
@@ -188,7 +201,7 @@ input:invalid{
 }
 
 .enterPassword{
-    padding-bottom:10px ;
+    padding-bottom:15px ;
 }
 #floatingInput1{
     width: 198px;
@@ -201,7 +214,7 @@ input:invalid{
 
 #floatingInput{
     border: none;
-    width: 413px;
+    width: 420px;
     height: 50px;
 }
 #floatingInput:focus{
@@ -212,7 +225,7 @@ input:invalid{
     border-bottom-left-radius:0% ;
 }
 .input-s1:focus{
-    border: none !important;
+    border: 1px solid lightgray !important;
     box-shadow: none !important;
     border-bottom:2px solid #0974DD !important;
     border-bottom-right-radius:0% !important;
@@ -225,15 +238,14 @@ input:invalid{
     border-bottom-right-radius:0% !important;
     border-bottom-left-radius:0% !important;
 }
-#floatingPassword{
-    border: none;
+#phone{
+    border: none !important;
     height: 50px;
     width: 368px;
 }
 .input-s2{
     border: none !important;
-    height: 50px !important;
-    width: 368px !important;
+    width: 395px !important;
 }
 #floatingPass1{
     height: 50px;
@@ -242,10 +254,10 @@ input:invalid{
     height: 50px;
 }
 
-#floatingPassword:focus{
-    border: none;
+#phone:focus{
+    border: none !important;
     box-shadow: none;
-    border-bottom:2px solid #0974DD;
+    border-bottom:2px solid #0974DD !important;
     border-bottom-right-radius:0%;
     border-bottom-left-radius:0% ;
 }
@@ -293,6 +305,9 @@ input:invalid{
         justify-content: space-between;
         width: 100%;
     }
+    .buttons-s2{
+        padding-bottom: 80px;
+    }
     .card{
         align-items: center;
         width: 80%;
@@ -314,7 +329,7 @@ input:invalid{
     height: 80%;
    }
    .block-3{
-    padding-bottom:40px ;
+    padding-bottom:20px ;
    }
    .card-parent{
     display: flex;
@@ -322,9 +337,13 @@ input:invalid{
     flex-wrap: wrap;
    }
    #floatingInput{
-    width: 55vw;
+    width: 58vw;
     }
-    #floatingPassword{
+    #floatingInput:focus{
+        border: none !important;
+        border-bottom: 2px solid #0974DD !important;
+    }
+    #phone{
     width: 52vw;
     }
     .step{
@@ -338,7 +357,11 @@ input:invalid{
     
     }
     .remember{
+        
         width: 100%;
+    }
+    .remember2{
+        display: flex;
     }
 }
 @media screen and (max-width:581px) {
@@ -354,7 +377,7 @@ input:invalid{
     
 }
 @media screen and (max-width:610px) {
-    #floatingPassword{
+    #phone{
         width: 48vw;
     }
     #floatingInput{
@@ -362,8 +385,8 @@ input:invalid{
     }
 }
 @media screen and (max-width:440px) {
-    #floatingPassword{
-        width: 40vw;
+    #phone{
+        width: 50vw;
     }
     #floatingInput{
         width: 48vw;

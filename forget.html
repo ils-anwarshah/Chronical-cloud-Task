@@ -22,26 +22,28 @@
                 <p>Enter your registered email address. We will email you a new password for your account</p>
 
             </div>
-            <form>
+            <form name="forget-form" onsubmit="return validateForm()" novalidate>
                 <div class="card-input-1">
                     
                         <div class="input-box mb-3">
                           <div class="email-pass-logo">
                             <img class="Input-icon" src="./assets/email.svg" alt=""/> 
                           </div>
-                          <div class="form-floating">
-                            <input type="email" class="form-control" id="floatingInput" placeholder="Email" autofocus required>
+                          <div class="form-floating" id="email">
+                            <input type="email" name='email' class="form-control" id="floatingInput" placeholder="Email" autofocus value="" onkeydown="validateForm()">
                             <label for="floatingInput">Email address</label>
                           </div>
                         </div>
                       
                 </div>
+                <b><small id="err" class="err"></small></b>
                 <div class="buttons">
-                    <button type="button" class="btn">RETRIEVE PASSWORD</button>
+                    <button type="submit" name="submit" class="btn">RETRIEVE PASSWORD</button>
                 </div>
             </form>
         </div>
     </div>
     </div>
+    <script src="forget.js"></script>
 </body>
 </html>

@@ -19,7 +19,7 @@ function seterror(id , error){
 function validateForm(){
     let returnval = true;
     let email = document.forms['login-form']['email'].value;
-    let regex = "[a-z0-9]+@[a-z]+\.[a-z]{2,3}";
+    let regex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/g;
     let element = document.getElementById('err');
     let border = document.getElementById('floatingInput');
     if(!email.match(regex)){

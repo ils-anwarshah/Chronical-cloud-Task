@@ -12,6 +12,7 @@ body {
     height: 100vh;
     
 }
+
 .card{
     align-items: center;
     background: #FFFFFF 0% 0% no-repeat padding-box;
@@ -25,6 +26,8 @@ body {
     font-size: smaller;
     position: relative;
     bottom: 18px;
+    display: block;
+    height: 0px;
     left: 12px;
 }
 

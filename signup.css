@@ -52,7 +52,7 @@ body {
     box-shadow: 0px 1px 6px #00000029;
     border-radius: 20px !important;
     width: 500px;
-    height: 650px;
+    height: 670px;
     overflow-x: auto;
 }
 .step-2{
@@ -61,8 +61,11 @@ body {
     box-shadow: 0px 1px 6px #00000029;
     border-radius: 20px !important;
     width: 500px;
-    height: 650px;
+    height: 670px;
     overflow-x: auto;
+}
+.invalid-border{
+    border-bottom: 2px solid red !important;
 }
 .card-hide{
     display: none !important;
@@ -170,10 +173,13 @@ body {
     border-radius: 6px;
     margin-bottom: 20px;
 }
+.margin{
+    height: 50px !important;
+}
 .copyright{
 
     text-align: center;
-    padding-top: 25px;
+    padding-top: 10px;
     width: 500px;
     height: 38px;
 }
@@ -182,10 +188,12 @@ body {
 } */
 .input-box{
     display: flex;
+    margin-top: 25px;
     border: 1px solid #DDDDDD;
     border-radius: 6px;
 }
 .email-pass-logo{
+    display: flex;
     width: 20px;
     margin: 0px 10px;
     align-self:center ;
@@ -199,9 +207,14 @@ body {
     color: #000000;
     opacity: 0.5;
 }
+#pass1container{
+    padding-bottom: 30px;
+}
 
 .enterPassword{
-    padding-bottom:15px ;
+    border: 1px solid #DDDDDD;
+    display: flex;
+    /* padding-bottom:15px ; */
 }
 #floatingInput1{
     width: 198px;
@@ -214,7 +227,7 @@ body {
 
 #floatingInput{
     border: none;
-    width: 420px;
+    width: 375px;
     height: 50px;
 }
 #floatingInput:focus{
@@ -239,7 +252,9 @@ body {
     border-bottom-left-radius:0% !important;
 }
 #phone{
-    border: none !important;
+    border: none ;
+    border-bottom-left-radius: 0%;
+    border-bottom-right-radius: 0%;
     height: 50px;
     width: 368px;
 }
@@ -248,10 +263,12 @@ body {
     width: 395px !important;
 }
 #floatingPass1{
+    border: none;
     height: 50px;
 }
 #floatingPass2{
     height: 50px;
+    border: none;
 }
 
 #phone:focus{
@@ -267,10 +284,42 @@ body {
 .arrow{
     font-size: larger;
 }
+#email-error{
+    position: relative;
+    height: 3px;
+    bottom: 6px;
+}
 #check-box{
     cursor: pointer;
 }
+.err{
+    height: 0px;
+    bottom: 2px;
+    color: red;
+    font-size: smaller;
+    display: block;
+}
+.err-step-2{
+    position: relative;
+    height: 0px;
+    bottom: 4px;
+    color: red;
+    font-size: smaller;
+    display: block;
+}
+.confirmPassword{
+    border: 1px solid lightgray;
+    display: flex;
+}
 
+.errpass{
+    color: red;
+    position: relative;
+    bottom: 2px;
+    height: 0px;
+    font-size: smaller;
+    display: block;
+}
 .tnc{
     color: #386CB5;
     text-decoration: none;
@@ -299,7 +348,7 @@ body {
         
     } */
     .steps-box{
-        width: 100%;
+        width: 93%;
     }
     .name-box{
         justify-content: space-between;
@@ -373,6 +422,12 @@ body {
 @media screen and (max-width:400px) {
     .image{
         padding-bottom: 20px;
+    }
+    .err{
+        height: 20px;
+    }
+    .err-step-2{
+        height: 20px;
     }
     
 }

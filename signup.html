@@ -36,20 +36,22 @@
             <div class="step s1 active" id="active-1"><h5>STEP 1</h5></div>
             <div class="step s2 "><h5>STEP 2</h5></div>
           </div>
-          <form name="signIn-form" onsubmit="" novalidate>
+          <form name="signIn-form"  novalidate>
             <div class="card-input-1 my-2">
               <div class="name-box">
-                <div class="form-floating">
+                <div class="form-floating" id="fnamediv">
                   <input
                     type="text"
                     name="fname"
                     class="form-control input-s1"
                     id="floatingInput1"
                     placeholder="First Name"
-                    autofocus
+                    onkeyup="validateFirstName()"
                   />
                   <label for="floatingInput1">First Name</label>
+                  <b><small id="fname-error" class="err"></small></b>
                 </div>
+                
                 <div class="form-floating">
                   <input
                     type="text"
@@ -57,12 +59,18 @@
                     class="form-control input-s1"
                     id="floatingInput2"
                     placeholder="Last Name"
+                    onkeyup="validateLastName()"
                   
                   />
                   <label for="floatingInput2">Last Name</label>
+                  <b><small id="lname-error" class="err"></small></b>
                 </div>
               </div>
-              <div class="input-box mb-3">
+              <div>
+              <div class="input-box mb-1" id="input-box2">
+                <div class="email-pass-logo eye-logo">
+                  <img class="Input-icon" src="./assets/email.svg" alt=""/>
+                </div>
                 <div class="form-floating">
                   <input
                     type="email"
@@ -70,27 +78,36 @@
                     class="form-control input-s1"
                     id="floatingInput"
                     placeholder="Email"
+                    onkeyup="validateEmail()"
                     
                   />
                   <label for="floatingInput">Email ID</label>
+                  
                 </div>
               </div>
+              <b><small id="email-error" class="err"></small></b>
+            </div>
 
               <div class="input-box">
                 <div class="email-pass-logo eye-logo">
-                  <i class="fa-solid fa-eye" id="eye"></i>
+                  <img class="Input-icon" src="./assets/email.svg" alt=""/>
                 </div>
-                <div class="form-floating password">
+                <div class="form-floating password" id='validnumber'>
                   <input
-                    type="number"
+                    type="tel"
                     name="number"
                     class="form-control password input-s1"
                     id="phone"
                     placeholder="number"
+                    onkeyup="validateNumber()"
+                    maxlength="10"
                   />
                   <label for="phone">Mobile Number</label>
+                  
                 </div>
+                
               </div>
+              <b><small id="number-error" class="err"></small></b>
             </div>
             <div class="remember">
               <div>
@@ -102,16 +119,24 @@
               </p>
             </div>
             <div class="passwords">
-              <div class="form-floating enterPassword">
+              <div id="pass1container">
+              <div class="form-floating enterPassword" >
                 <input
                   type="password"
                   name="pass"
                   class="form-control password input-s1"
                   id="floatingPass1"
                   placeholder="Password"
+                  onkeyup="validatePass()"
                 />
                 <label for="floatingPass1">Enter Password</label>
-              </div>
+                <div class="email-pass-logo eye-logo">
+                  <i class="fa-solid fa-eye" id="eye1"></i>
+              
+            </div>
+          </div>
+          <b><small id="password-error" class="errpass"></small></b>
+        </div>
               <div class="form-floating confirmPassword">
                 <input
                   type="password"
@@ -119,13 +144,18 @@
                   class="form-control password input-s1"
                   id="floatingPass2"
                   placeholder="Password"
-                  required
+                  onkeyup="validateConfimPass()"
                 />
                 <label for="floatingPass2">Confirm Password</label>
+                <div class="email-pass-logo eye-logo">
+                  <i class="fa-solid fa-eye" id="eye2"></i>
+              
+            </div>
               </div>
+              <b><small id="confim-password-error" class="err"></small></b>
             </div>
             <div class="buttons">
-              <button type="button" class="btn"  id ='next-step' onclick="">
+              <button type="button"  class="btn"  id ='next-step' onclick="return NextStepvalidation()">
                 Next Step <b class="arrow">&#x2192;</b>
               </button>
             </div>
@@ -146,78 +176,82 @@
             <div class="step s1 "><h5>STEP 1</h5></div>
             <div class="step  s2 active " id="active-2"><h5>STEP 2</h5></div>
           </div>
-          <form>
+          <form  name="signIn-form-2" onsubmit="return FormSubmit()" action="dashboard.html">
             <div class="card-input-1 my-2">
-              <div class="input-box my-3">
-                <div class="form-floating">
+              <div class="input-box mb-4">
+                <div class="form-floating margin">
                   <input
                     type="text"
                     name="school"
-                    class="form-control input-s2"
+                    class="form-control input-s2 margin"
                     id="input1"
                     placeholder="University name"
-                    autofocus
-                    required
+                    onkeyup="ValidateSchoolName()"
                   />
-                  <label for="input1"
-                    >School / University / Institute Name*</label
-                  >
+                  <label for="input1">School / University / Institute Name*</label>
+                <b><small id="school-error" class="err-step-2"></small></b>
                 </div>
               </div>
 
-              <div class="input-box my-3">
-                <div class="form-floating">
+              <div class="input-box my-4">
+                <div class="form-floating margin">
                   <input
                     type="text"
                     name="state"
-                    class="form-control input-s2"
+                    class="form-control input-s2 margin"
                     id="input2"
                     placeholder="state"
-                    autofocus
-                    required
+                    onkeyup="ValidateStateName()"
+                 
                   />
                   <label for="input2">State*</label>
+                  <b><small id="state-error" class="err-step-2"></small></b>
                 </div>
               </div>
-              <div class="input-box my-3">
-                <div class="form-floating">
+              <div class="input-box my-4">
+                <div class="form-floating margin">
                   <input
                     type="text"
                     name="city"
-                    class="form-control input-s2"
+                    class="form-control input-s2 margin"
                     id="input3"
                     placeholder="city"
-                    autofocus
-                    required
+                    onkeyup="ValidateCityName()"
+                   
                   />
                   <label for="input3">City*</label>
+                  <b><small id="city-error" class="err-step-2"></small></b>
                 </div>
               </div>
-              <div class="input-box my-3">
-                <div class="form-floating">
+              <div class="input-box my-4">
+                <div class="form-floating margin">
                   <input
                     type="text"
                     name="country"
-                    class="form-control input-s2"
+                    class="form-control input-s2 margin"
                     id="input4"
                     placeholder="country"
-                    autofocus
-                    required
+                    onkeyup="ValidateCountryName()"
+                    
                   />
                   <label for="input4">Country</label>
+                  <b><small id="country-error" class="err-step-2"></small></b>
                 </div>
               </div>
               <div class="input-box">
-                <div class="form-floating ">
+                <div class="form-floating margin">
                   <input
                     type="text"
                     name="zipcode"
-                    class="form-control input-s2"
+                    class="form-control input-s2 margin"
                     id="input5"
                     placeholder="ZipCode"
-                    required
+                    maxlength="6"
+                    onkeyup="ValidateZipCode()"
+                    
                   />
                   <label for="input5">Zip Code*</label>
+                  <b><small id="zipcode-error" class="err-step-2"></small></b>
                 </div>
               </div>
             </div>
@@ -229,18 +263,20 @@
                   type="checkbox"
                   value=""
                   id="check-box"
+                  onclick="checkCheckBoxes()"
                 />
               </span>
               <label class="form-check-label" for="check-box">
                 I agree to the <a class="tnc" href=""><b>Terms of service</b></a> and
                 <a class="tnc" href=""><b>Privacy Policy</b></a>.
               </label>
+              <b><small id="checkbox-error" class="err"></small></b>
             </div>
             <div class="buttons-s2">
               <button type="button" class="btn-s2" id="step-back">
                 <span class="left-arrow"><b>&#x2190;</b> Step Back</span>
               </button>
-              <button type="button" class="btn">Create Account</button>
+              <button type="submit" class="btn" onclick="checkCheckBoxes()">Create Account</button>
             </div>
           </form>
         </div>

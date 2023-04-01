@@ -31,12 +31,15 @@ body {
     height: 33px;
 }
 .err{
+    height: 16px;
     color: red;
     font-size: smaller;
     position: relative;
     bottom: 18px;
     left: 12px;
+    display: block;
 }
+
 .login-text p{
     margin-left: 30px;
     

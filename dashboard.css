@@ -1,0 +1,339 @@
+body {
+  padding: 0;
+  margin: 0;
+  background-color: #f3f4f9 !important;
+  /* overflow: hidden; */
+  font-family: "Open Sans";
+}
+header {
+  width: 100vw;
+  /* display: block; */
+  height: 175px;
+  /* padding: 0 0 0 300px; */
+  /* margin-left: 300px; */
+  /* UI Properties */
+  background: #487fcc 0% 0% no-repeat padding-box;
+  box-shadow: 0px 1px 4px #15223214;
+  opacity: 1;
+  position: absolute;
+  top: 0;
+}
+
+header .options {
+  display: flex;
+  height: 44px;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 303px;
+  margin-top: 25px;
+  /* border: 1px solid black; */
+}
+header .options .title {
+  color: white;
+  font-size: 20px;
+}
+
+#dropdown-bar {
+  width: 206px;
+  height: 36px;
+}
+.bell-button {
+  z-index: 2;
+  cursor: pointer;
+  margin: 0px 15px;
+}
+
+header .options .right-options {
+  display: flex;
+  align-items: center;
+  margin-right: 35px;
+  z-index: 2;
+  /* justify-content: space-evenly; */
+}
+
+header .options .right-options button {
+  background: #ffffff 0% 0% no-repeat padding-box;
+  border: none;
+  box-shadow: 0px 3px 6px #00000026;
+  border-radius: 8px;
+  opacity: 1;
+  height: 44px;
+  width: 190px;
+  color: #386cb5;
+  font-weight: 600;
+  font-size: 14px;
+  outline: none;
+}
+
+header .options .right-options button:hover{
+  font-weight: bold;
+}
+main {
+  z-index: 1;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+main .sidebar-container {
+  width: 280px;
+  height: 100vh;
+  z-index: 1;
+  /* border: 1px solid green; */
+  padding: 10px;
+  /* UI Properties */
+  /* background: #FFFFFF 0% 0% no-repeat padding-box; */
+  /* border-radius: 10px; */
+  opacity: 1;
+}
+main .main-container {
+  z-index: 1;
+  flex-grow: 1;
+  /* border: 2px solid salmon; */
+  
+}
+
+main .sidebar-container .sidebar {
+  /* width: 200px; */
+  height: 100%;
+  /* border: 1px solid blue; */
+  background: #FFFFFF 0% 0% no-repeat padding-box;
+  border-radius: 10px;
+}
+.sidebar-image{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 140px;
+
+}
+.sidebar-image img{
+  width: 210px;
+}
+main .main-container .main {
+  margin-top: 100px;
+  height: calc(100% - 100px);
+  /* border: 1px solid violet; */
+  overflow-y: scroll;
+}
+
+.profile {
+  width: 150px;
+  height: 120px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  position: relative;
+}
+ul li:hover{
+  background: #ebebeb;
+  cursor: pointer;
+}
+
+.sidebar-items{
+  height: 60px;
+  width: 100%;
+  border-left: 2px solid blue;
+  color: #171725;
+}
+.sidebar-iteams-container ul{
+  list-style: none;
+  padding-left: 0px;
+}
+.sidebar-iteams-container ul li{
+  padding: 16px;
+}
+ul li a{
+  text-decoration: none;
+  color: #171725;
+  font-weight: 600;
+}
+.icon-styl{
+  font-size: 20px;
+  width: 25px;
+  margin-right: 20px;
+}
+
+.profile-dropdown {
+  display: none;
+    width: 100%;
+    top: 80px;
+    position: absolute;
+    border: 1px solid red;
+    height: 200px;
+}
+.logo-img{
+  border-radius: 100%;
+  width: 30px;
+  height: 30px;
+  margin-right: 5px;
+}
+.profile-img-name{
+  display: flex;
+  justify-content: center;
+}
+.profile-text{
+  margin-bottom: 0;
+}
+.small-card{
+  background: #FFFFFF 0% 0% no-repeat padding-box;
+  box-shadow: 0px 1px 6px #0000001A;
+  border-radius: 10px;
+  opacity: 1;
+  /* border: 2px solid red; */
+  width: 20%;
+  min-width: 200px;
+  max-width: 320px;
+  /* height: 130px; */
+}
+.small-cards-container{
+    margin: 0px 30px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.card-container{
+  display: flex;
+  margin: 30px;
+  justify-content: space-between;
+}
+.containers{
+  border: 2px solid red;
+  width: 47%;
+  height: 300px;
+}
+.table-container{
+  margin: 0px 30px;
+  width: auto;
+  /* border: 2px solid red; */
+  background: #FFFFFF 0% 0% no-repeat padding-box;
+  box-shadow: 0px 1px 6px #0000001A;
+  border-radius: 10px 10px 0px 0px;
+  height: auto;
+}
+.text-card{
+  margin-top: 20px;
+  margin-left: 20px;
+  color:#000000;
+  opacity: 0.4;
+}
+.heading-text{
+  display: flex;
+  align-items: baseline;
+  margin-left: 20px
+}
+.heading-container{
+  height: 50px;
+  margin-right: 20px;
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: space-between;
+}
+.small-card-bottom{
+  color: #000000;
+  font: normal normal normal 14px/19px Open Sans;
+  margin-left: 20px;
+  margin-bottom: 20px;
+  opacity: 0.4;
+
+}
+.count{
+    text-align: left;
+    font-size: 40px;
+    font-weight: 600;
+    letter-spacing: 0px;
+    color: #000000;
+    margin-right: 5px;
+}
+.card-count-logo1{
+  display: flex;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  background: transparent linear-gradient(158deg, #6D6AE3 0%, #6664D8 100%) 0% 0% no-repeat padding-box;
+  border-radius: 100%;
+  align-items: center;
+}
+.size-logo{
+  width: 35px;
+  color: white;
+  filter: invert();
+}
+.card-count-logo2{
+  display: flex;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 100%;
+  align-items: center;
+  background: transparent linear-gradient(158deg, #FB9A40 0%, #F88820 100%) 0% 0% no-repeat padding-box;
+}
+.card-count-logo3{
+  display: flex;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 100%;
+  align-items: center;
+  background: transparent linear-gradient(158deg, #FFC05D 0%, #F8A829 100%) 0% 0% no-repeat padding-box;
+}
+.card-count-logo4{
+  display: flex;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 100%;
+  align-items: center;
+  background: transparent linear-gradient(158deg, #44D58C 0%, #2CBE59 100%) 0% 0% no-repeat padding-box;
+}
+#icon-style1{
+  width: 21px;
+  height: 32px;
+  font-size: 26px;
+  color: white;
+}
+#icon-style2{
+  width: 26px;
+  height: 25px;
+  font-size: 22px;
+  color: white;
+}
+#icon-style3{
+  width: 28px;
+  height: 26px;
+  font-size: 25px;
+  color: white;
+}
+.table table{
+  width: 100%;
+}
+.table table tr{
+  border: none;
+}
+.table th,td {
+    padding:15px;
+}
+.table th{
+  color: #7E84A3;
+}
+.table-heading{
+  padding-top:20px;
+  padding-left: 20px;
+  margin-bottom: 0px;
+}
+.table-heading p{
+  margin-bottom: 0px;
+  color: #444B48;
+  font-weight: 600;
+}
+.table-icon-text{
+  text-decoration: none;
+  padding-left: 5px;
+}
+.schools-logo{
+  border:1px solid #EEEEEE;
+  height: 60px;
+  width: 60px;
+}

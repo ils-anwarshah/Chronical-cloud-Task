@@ -21,6 +21,10 @@
       integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
       crossorigin="anonymous"
     />
+     <!-- phone -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css" />
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+     <!-- end-phone -->
   </head>
   <body>
     <div class="container1">
@@ -89,23 +93,12 @@
             </div>
 
               <div class="input-box">
-                <div class="email-pass-logo eye-logo">
-                  <img class="Input-icon" src="./assets/email.svg" alt=""/>
-                </div>
-                <div class="form-floating password" id='validnumber'>
-                  <input
-                    type="tel"
-                    name="number"
-                    class="form-control password input-s1"
-                    id="phone"
-                    placeholder="number"
-                    onkeyup="validateNumber()"
-                    maxlength="10"
-                  />
-                  <label for="phone">Mobile Number</label>
-                  
-                </div>
                 
+                <div class="contact-number-input">
+                  <input type="number" class="form-control" placeholder="Mobile Number"
+                      id="phone" onkeyup="validateNumber()" name="number"
+                      autocomplete="off" contextmenu="false">
+                </div>
               </div>
               <b><small id="number-error" class="err"></small></b>
             </div>
@@ -289,5 +282,6 @@
     </div>
     <script src="signup.js">
     </script>
+    <script src="contact.js"></script>
   </body>
 </html>

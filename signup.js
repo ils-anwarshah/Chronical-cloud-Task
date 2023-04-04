@@ -23,6 +23,7 @@ function NextStepvalidation(){
 function FormSubmit(){
     let returnval = false;
     if (NextStepvalidation() && ValidateSchoolName() && ValidateStateName() && ValidateCityName() && ValidateCountryName() && ValidateZipCode() && checkCheckBoxes()){
+        document.forms['signIn-form'].submit();
         returnval = true;
     }
     else {

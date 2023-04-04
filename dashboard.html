@@ -1,13 +1,189 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="dashboard.css" />
+    <script
+      src="https://kit.fontawesome.com/0c9e474dd2.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,600;0,800;1,400&family=Poppins:wght@100&display=swap"
+      rel="stylesheet"
+    />
     <title>Dashboard</title>
-</head>
-<body>
-    <div class="container">Hello Welcome to Dashboard</div>
-    
-</body>
+  </head>
+  <body>
+    <header>
+      <div class="options">
+        <div class="title">
+          <span>Dashboard</span>
+        </div>
+        <div class="right-options">
+          <div><button onclick="myfunc()">+ ADD NEW SCHOOL</button></div>
+          <div class="bell-button"><img src="./assets/ic-bell.svg" /></div>
+          <div class="profile">
+            <div class="profile-img-name">
+              <img
+                class="logo-img"
+                src="https://media.istockphoto.com/id/1309328823/photo/headshot-portrait-of-smiling-male-employee-in-office.jpg?b=1&s=170667a&w=0&k=20&c=MRMqc79PuLmQfxJ99fTfGqHL07EDHqHLWg0Tb4rPXQc="
+                alt=""
+              />
+              <p class="profile-text">Anwar Shah</p>
+            </div>
+            <i class="fa-solid fa-angle-down"></i>
+            <div class="profile-dropdown"></div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div class="sidebar-container">
+        <div class="sidebar">
+          <div class="sidebar-image">
+            <img src="./assets/Logo.png" alt="sidebar-logo"/>
+          </div>
+          <hr/>
+          <div class="sidebar-iteams-container">
+            <ul>
+              <li class="sidebar-items"><a href="" ><img src="./assets/grid.png" class="icon-styl"/>Dashboard</a></li>
+              <li class="sidebar-items"><a href="" ><img src="./assets/school-icon.svg" class="icon-styl"></img>Manage Schools</a></li>
+              <li class="sidebar-items"><a href="" ><i class='fas fa-user-tie icon-styl'></i>Manage Teachers</a></li>
+              <li class="sidebar-items"><a href="" ><i class='fas fa-users icon-styl'></i>Manage Roster</a></li>
+              <li class="sidebar-items"><a href="" ><i class="fa fa-id-card-o icon-styl"></i>Manage Classes</a> </li>
+            </ul>
+          
+          </div>
+
+        </div>
+      </div>
+      <div class="main-container">
+        <div class="main">
+          <div class="small-cards-container">
+            <div class="small-card">
+              <div class="text-card"><span>SCHOOL COUNT</span></div>
+              <div class="heading-container">
+                <div class="heading-text">
+                  <span class="count">04</span>
+                  <span>active</span>
+                </div>
+                <div  class="card-count-logo1 ">
+                  <img src="./assets/school-icon.svg" class="size-logo"></img>
+                </div>
+              </div>
+              <div class="small-card-bottom"><span>Total School: 12</span></div>
+            </div>
+            <div class="small-card">
+              <div class="text-card"><span>TEACHER COUNT</span></div>
+              <div class="heading-container">
+                <div class="heading-text">
+                  <span class="count">84</span>
+                  <span>active</span>
+                </div>
+                <div class="card-count-logo2"><i class='fas fa-user-tie ' id="icon-style1"></i></div>
+              </div>
+              <div class="small-card-bottom"><span>Total School: 98</span></div>
+            </div>
+            <div class="small-card">
+              <div class="text-card"><span>ROSTER COUNT</span></div>
+              <div class="heading-container">
+                <div class="heading-text">
+                  <span class="count">125</span>
+                  <span>active</span>
+                </div>
+                <div class="card-count-logo3"><i class='fas fa-users' id="icon-style2"></i></div>
+              </div>
+              <div class="small-card-bottom"><span>Total School: 130</span></div>
+            </div>
+            <div class="small-card">
+              <div class="text-card"><span>CLASSES COUNT</span></div>
+              <div class="heading-container">
+                <div class="heading-text">
+                  <span class="count">76</span>
+                  <span>active</span>
+                </div>
+                <div class="card-count-logo4"><i class="fas fa-chalkboard-user" id="icon-style3"></i></div>
+              </div>
+              <div class="small-card-bottom"><span>Total School: 79</span></div>
+            </div>
+          </div>
+          <div class="card-container">
+            <div class="containers"></div>
+            <div class="containers"></div>
+          </div>
+          <div class="table-container">
+
+            <!-- table start here -->
+            <div class="table">
+              <div class="table-heading"><p>School List</p></div>
+              <table>
+                <tr>
+                  <th>
+                    LOGO
+                  </th>
+                  <th>SCHOOL NAME</th>
+                  <th>SCHOOL CONTACT</th>
+                  <th>SCHOOL SIZE <small style="color: black;">Roster/Teacher</small></th>
+                  <th>DATA USAGE</th>
+                  <th>STATUS</th>
+                  <th>ACTION</th>
+                </tr>
+                <tr>
+                  <td><img src="./assets/table-1.png" class="schools-logo"/></td>
+                  <td>School_Name, School name goes here…</td>
+                  <td>school_name@email.com<br/>
+                    +91 731 987 321, +91 98765 43210</td>
+                  <td>176 / 12</td>
+                  <td><b>256</b>/500 mb</td>
+                  <td>Active</td>
+                  <td><i class="fa-solid fa-eye"></i><a href="" class="table-icon-text">View</a></td>
+                </tr>
+                <tr>
+                  <td><img src="./assets/table-2.png" class="schools-logo"/></td>
+                  <td>Queen’s College</td>
+                  <td>	Queen'scollege@email.com<br/>
+                    +91 731 987 321, +91 98765 43210</td>
+                  <td>	225 / 18</td>
+                  <td>	<b>103</b>/500 mb</td>
+                  <td>Active</td>
+                  <td><i class="fa-solid fa-eye"></i><a href="" class="table-icon-text">View</a></td>
+                </tr>
+                <tr>
+                  <td><img src="./assets/table-2.png" class="schools-logo"/></td>
+                  <td>Golden International School</td>
+                  <td>	Goldeninternationalschool@email.com<br/>
+                    +91 731 987 321, +91 98765 43210</td>
+                  <td>364 / 30</td>
+                  <td><b>324</b>/500 mb</td>
+                  <td>Active</td>
+                  <td><i class="fa-solid fa-eye"></i><a href="" class="table-icon-text">View</a></td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script>
+      function myfunc() {
+        alert("I got CLicked");
+      }
+    </script>
+  </body>
 </html>

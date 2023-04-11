@@ -448,6 +448,9 @@ td {
   cursor:pointer;
   color: white ;
 }
+.in-active-plot{
+  display: none !important;
+}
 .sidebar-close-button{
   display: none;
   position: relative;

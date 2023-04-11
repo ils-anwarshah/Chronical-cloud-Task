@@ -1,13 +1,20 @@
 const rosterID = document.getElementById('roster-id');
 const teacherID = document.getElementById('teacher-id');
-
+const Bar_id_teacher = document.getElementById('bar-chart-teacher');
+const Bar_id_roster = document.getElementById('bar-chart-roster');
 function toggleStepTeacher(){
     teacherID.classList.add("active");
     rosterID.classList.remove("active")
+    Bar_id_roster.classList.add('in-active-plot');
+    Bar_id_teacher.classList.remove('in-active-plot');
+    
 }
 function toggleStepRoster(){
     rosterID.classList.add("active");
     teacherID.classList.remove("active")
+    Bar_id_teacher.classList.add('in-active-plot');
+    Bar_id_roster.classList.remove('in-active-plot');
+    
 }
 
 toggleStepRoster()

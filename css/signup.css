@@ -1,7 +1,7 @@
 body {
     margin: 0;
     padding: 0;
-    background: transparent url('assets/Bg.jpg') 0% 0% no-repeat padding-box;
+    background: transparent url('/assets/Bg.jpg') 0% 0% no-repeat padding-box;
 }
 .container1{
     display: flex;

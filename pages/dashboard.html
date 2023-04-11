@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="dashboard.css" />
+    <link rel="stylesheet" href="/css/dashboard.css" />
     <script
       src="https://kit.fontawesome.com/0c9e474dd2.js"
       crossorigin="anonymous"
@@ -52,10 +52,10 @@
           <div class="hidden-button">
             <button onclick="myfunc()"><span style="font-size: larger;">&#43;</span> ADD NEW SCHOOL</button>
           </div>
-          <div class="bell-button"><img src="./assets/ic-bell.svg" /></div>
+          <div class="bell-button"><img src="/assets/ic-bell.svg" /></div>
           <div class="profile">
             <div class="profile-img-name">
-              <img class="logo-img" src="./assets/profile-pic.jpg" alt="" />
+              <img class="logo-img" src="/assets/profile-pic.jpg" alt="" />
               <p class="profile-text">Anwar Shah</p>
             </div>
             <i class="fa-solid fa-angle-down" id="dropdown-arrow"></i>
@@ -89,7 +89,7 @@
         <div class="sidebar">
           <div class="sidebar-close-button" id="close-button" onclick="closeNav()"> x </div>
           <div class="sidebar-image">
-            <img src="./assets/Logo.png" alt="sidebar-logo" />
+            <img src="/assets/Logo.png" alt="sidebar-logo" />
           </div>
           <hr style="margin-top: 0;"/>
           <div class="sidebar-iteams-container">
@@ -102,7 +102,7 @@
               <li class="sidebar-items">
                 <a href=""
                   ><img
-                    src="./assets/card-icons/school-count.svg"
+                    src="../assets/card-icons/school-count.svg"
                     class="img-icon-styl"
                   />Manage Schools</a
                 >
@@ -139,7 +139,7 @@
                   </div>
                   <div class="card-count-logo1">
                     <img
-                      src="./assets/card-icons/school-count.svg"
+                      src="/assets/card-icons/school-count.svg"
                       class="icon-style"
                     />
                   </div>
@@ -156,7 +156,7 @@
                     <span>Active</span>
                   </div>
                   <div class="card-count-logo2">
-                    <img src="./assets/card-icons/teacher-count.svg" class="icon-style"/>
+                    <img src="/assets/card-icons/teacher-count.svg" class="icon-style"/>
                   </div>
                 </div>
                 <div class="small-card-bottom">
@@ -171,7 +171,7 @@
                     <span>Active</span>
                   </div>
                   <div class="card-count-logo3">
-                    <img src="./assets/card-icons/roster-count.svg" class="icon-style"/>
+                    <img src="/assets/card-icons/roster-count.svg" class="icon-style"/>
                   </div>
                 </div>
                 <div class="small-card-bottom">
@@ -186,7 +186,7 @@
                     <span>Active</span>
                   </div>
                   <div class="card-count-logo4">
-                    <img src="./assets/card-icons/classes-count.svg" class="icon-style"/>
+                    <img src="/assets/card-icons/classes-count.svg" class="icon-style"/>
                   </div>
                 </div>
                 <div class="small-card-bottom">
@@ -200,21 +200,31 @@
                   <span  id="roster-id" onclick="toggleStepRoster()">Roster</span><span> &nbsp; | &nbsp;</span
                   ><span id="teacher-id" onclick="toggleStepTeacher()">Teacher</span>
                 </div>
-                <canvas id="bar-chart" class="bar-plot"></canvas>
+                <div id="bar-chart-div">
+                  <canvas id="bar-chart-roster" class="bar-plot"></canvas>
+                  <canvas id="bar-chart-teacher" class="bar-plot in-active-plot"></canvas>
+                </div>
+                
               </div>
               <div class="containers">
                 <div class="pie-heading">
                   <span style="font-size: 22px; font-weight: 600;">Data Usage</span
                   ><span class="pie-dropdown">
-                    <select name="school-dropdown" id="school-dropdown">
-                      <option value="school_1">school_name_1</option>
-                      <option value="school_2">school_name_2</option>
-                      <option value="school_3" selected>school_name_3</option>
-                      <option value="school_4">school_name_4</option>
+                    <select name="school-dropdown" id="school-dropdown" onclick="CheckPieIndex()">
+                      <option value="school_1" >school_name_1</option>
+                      <option value="school_2" >school_name_2</option>
+                      <option value="school_3" selected >school_name_3</option>
+                      <option value="school_4" >school_name_4</option>
                     </select>
                   </span>
                 </div>
-                <canvas id="pie-chart"></canvas>
+                <div id="pie-chart-div">
+                  <canvas id="school_pie-1"></canvas>
+                  <canvas id="school_pie-2"></canvas>
+                  <canvas id="school_pie-3"></canvas>
+                  <canvas id="school_pie-4"></canvas>
+                </div>
+                
               </div>
             </div>
           </div>
@@ -240,7 +250,7 @@
                 <tbody>
                   <tr class="border-bottom">
                     <td>
-                      <img src="./assets/table-1.png" class="schools-logo" />
+                      <img src="/assets/table-1.png" class="schools-logo" />
                     </td>
                     <td>School_Name, School name goes here…</td>
                     <td>
@@ -257,7 +267,7 @@
                   </tr>
                   <tr class="border-bottom">
                     <td>
-                      <img src="./assets/table-2.png" class="schools-logo" />
+                      <img src="/assets/table-2.png" class="schools-logo" />
                     </td>
                     <td>Queen’s College</td>
                     <td>
@@ -274,7 +284,7 @@
                   </tr>
                   <tr class="border-bottom">
                     <td>
-                      <img src="./assets/table-2.png" class="schools-logo" />
+                      <img src="/assets/table-2.png" class="schools-logo" />
                     </td>
                     <td>Golden International School</td>
                     <td>
@@ -301,8 +311,8 @@
         alert("I got CLicked");
       }
     </script>
-    <script src="charts/bar-chart.js"></script>
-    <script src="charts/pie-chart.js"></script>
-    <script src="dashboard.js"></script>
+    <script src="/charts/bar-chart.js"></script>
+    <script src="/charts/pie-chart.js"></script>
+    <script src="/js/dashboard.js"></script>
   </body>
 </html>

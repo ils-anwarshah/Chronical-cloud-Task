@@ -1,17 +1,11 @@
-var xValues = ["Multimedia", "Audio Notes", "Notes", "Free Space"];
-var yValues = [49, 23, 17, 11];
-var barColors1 = [
-    "#386CB5",
-    "#7DB0F7",
-    "#286BCB",
-    "#CCCCCC"
-  ];
-new Chart('pie-chart', {
+
+function pieChart(id,xValues,yValues,barColors){
+  new Chart(id, {
     type: "pie",
     data: {
       labels: xValues,
       datasets: [{
-        backgroundColor: barColors1,
+        backgroundColor: barColors,
         data: yValues
       }]
     },
@@ -35,7 +29,7 @@ new Chart('pie-chart', {
             return ctx.value + " mb ";
           },
           position: "outside",
-          fontColor: barColors1
+          fontColor: barColors
         },
         legend: {
           display: true,
@@ -62,3 +56,49 @@ new Chart('pie-chart', {
     plugins:[ChartDataLabels]
   });
 
+
+}
+var xValue = ["Multimedia", "Audio Notes", "Notes", "Free Space"];
+var yValue1 = [23, 43, 65, 23];
+var yValue2 = [39, 25, 27, 13];
+var yValue3 = [49, 23, 17, 11];
+var yValue4 = [87, 23, 15, 65];
+var barColor = [
+    "#386CB5",
+    "#7DB0F7",
+    "#286BCB",
+    "#CCCCCC"
+  ];
+
+pieChart("school_pie-1",xValue,yValue1,barColor);
+pieChart("school_pie-2",xValue,yValue2,barColor);
+pieChart("school_pie-3",xValue,yValue3,barColor);
+pieChart("school_pie-4",xValue,yValue4,barColor);
+
+function ShowPiechart(index){
+  let pie_chart_div = document.getElementById('pie-chart-div');
+  let canvas_elements = pie_chart_div.getElementsByTagName('canvas');
+  // console.log(canvas_elements.length);
+  for (let i=0; i<canvas_elements.length;i++){
+    canvas_elements[i].style.display="none";
+  }
+  canvas_elements[index-1].style.display="block";
+}
+
+function CheckPieIndex(){
+  let dropdown_id = document.getElementById('school-dropdown');
+  if (dropdown_id.value === 'school_1'){
+    ShowPiechart(1);
+  }
+  else if (dropdown_id.value === 'school_2'){
+    ShowPiechart(2);
+  }
+  else if (dropdown_id.value === 'school_3'){
+    ShowPiechart(3);
+  }
+  else {
+    ShowPiechart(4);
+  }
+}
+
+ShowPiechart(3);

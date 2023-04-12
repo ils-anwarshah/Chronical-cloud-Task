@@ -1,0 +1,18 @@
+{
+    "barChartData":[
+        {   
+            "id":"roster",
+            "label_values": ["school_1","school_2","school_3","school_4"],
+            "barColors" : "#F9AC32",
+            "activeData":[176,225,364,284],
+            "inActiveData":[50, 90, 50, 60]
+        },
+        {   
+            "id":"teacher",
+            "label_values": ["school_1","school_2","school_3","school_4"],
+            "barColors" : "#F9AC32",
+            "activeData":[122,275,232,212],
+            "inActiveData":[40, 22, 40, 10]
+        }
+    ]
+}

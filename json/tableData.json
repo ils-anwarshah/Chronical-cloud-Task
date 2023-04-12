@@ -1,0 +1,43 @@
+{
+    "tableData":[
+        {
+            "schoolName":"School_Name, School name goes here…",
+            "schoolLogo":"/assets/table-1.png",
+            "schoolContact1":"school_name@email.com",
+            "schoolContact2":"+91 731 987 321, +91 98765 43210",
+            "schoolSizeRoster":176,
+            "schoolSizeTeacher":12,
+            "dataUsage":256,
+            "totalData":500,
+            "status":"Active",
+            "link":"#"
+
+        },
+        {
+            "schoolName":"Queen’s College",
+            "schoolLogo":"/assets/table-2.png",
+            "schoolContact1":"Queen'scollege@email.com",
+            "schoolContact2":"+91 731 987 321, +91 98765 43210",
+            "schoolSizeRoster":225,
+            "schoolSizeTeacher":18,
+            "dataUsage":103,
+            "totalData":500,
+            "status":"Active",
+            "link":"#"
+
+        },
+        {
+            "schoolName":"Golden International School",
+            "schoolLogo":"/assets/table-2.png",
+            "schoolContact1":"Goldeninternationalschool@email.com",
+            "schoolContact2":"+91 731 987 321, +91 98765 43210",
+            "schoolSizeRoster":364,
+            "schoolSizeTeacher":30,
+            "dataUsage":324,
+            "totalData":500,
+            "status":"Active",
+            "link":"#"
+
+        }
+    ]
+}

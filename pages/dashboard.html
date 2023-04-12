@@ -74,7 +74,7 @@
               </i><span  class="dropdown-list-item">Help Center</span></a></li>
               <hr class="profile-line"/>
                 <li>
-                  <a href="" class="profile-item"><i class="material-symbols-outlined dropdown-icon">
+                  <a href="/pages/login.html" class="profile-item"><i class="material-symbols-outlined dropdown-icon">
                     logout
                 </i><span class="dropdown-list-item" >Log Out</span></a>
                   </li>
@@ -130,68 +130,16 @@
         <div class="main">
           <div class="cards-main-container">
             <div class="small-cards-container">
-              <div class="small-card">
-                <div class="text-card"><span>SCHOOL COUNT</span></div>
-                <div class="heading-container">
-                  <div class="heading-text">
-                    <span class="count">04</span>
-                    <span>Active</span>
-                  </div>
-                  <div class="card-count-logo1">
-                    <img
-                      src="/assets/card-icons/school-count.svg"
-                      class="icon-style"
-                    />
-                  </div>
-                </div>
-                <div class="small-card-bottom">
-                  <span>Total School: 12</span>
-                </div>
+              <div class="small-card" id="small-card-0">
+             
               </div>
-              <div class="small-card">
-                <div class="text-card"><span>TEACHER COUNT</span></div>
-                <div class="heading-container">
-                  <div class="heading-text">
-                    <span class="count">84</span>
-                    <span>Active</span>
-                  </div>
-                  <div class="card-count-logo2">
-                    <img src="/assets/card-icons/teacher-count.svg" class="icon-style"/>
-                  </div>
-                </div>
-                <div class="small-card-bottom">
-                  <span>Total School: 98</span>
-                </div>
+              <div class="small-card" id="small-card-1">
+                
               </div>
-              <div class="small-card">
-                <div class="text-card"><span>ROSTER COUNT</span></div>
-                <div class="heading-container">
-                  <div class="heading-text">
-                    <span class="count">1256</span>
-                    <span>Active</span>
-                  </div>
-                  <div class="card-count-logo3">
-                    <img src="/assets/card-icons/roster-count.svg" class="icon-style"/>
-                  </div>
-                </div>
-                <div class="small-card-bottom">
-                  <span>Total School: 1307</span>
-                </div>
+              <div class="small-card" id="small-card-2">
               </div>
-              <div class="small-card">
-                <div class="text-card"><span>CLASSES COUNT</span></div>
-                <div class="heading-container">
-                  <div class="heading-text">
-                    <span class="count">76</span>
-                    <span>Active</span>
-                  </div>
-                  <div class="card-count-logo4">
-                    <img src="/assets/card-icons/classes-count.svg" class="icon-style"/>
-                  </div>
-                </div>
-                <div class="small-card-bottom">
-                  <span>Total School: 79</span>
-                </div>
+              <div class="small-card" id="small-card-3">
+              
               </div>
             </div>
             <div class="card-container">
@@ -248,56 +196,13 @@
                   </tr>
                 </thead>
                 <tbody>
-                  <tr class="border-bottom">
-                    <td>
-                      <img src="/assets/table-1.png" class="schools-logo" />
-                    </td>
-                    <td>School_Name, School name goes here…</td>
-                    <td>
-                      school_name@email.com<br />
-                      +91 731 987 321, +91 98765 43210
-                    </td>
-                    <td>176 / 12</td>
-                    <td><b>256</b>/500 mb</td>
-                    <td>Active</td>
-                    <td>
-                      <i class="fa-solid fa-eye"></i
-                      ><a href="" class="table-icon-text">View</a>
-                    </td>
+                  <tr class="border-bottom" id="table-1">
                   </tr>
-                  <tr class="border-bottom">
-                    <td>
-                      <img src="/assets/table-2.png" class="schools-logo" />
-                    </td>
-                    <td>Queen’s College</td>
-                    <td>
-                      Queen'scollege@email.com<br />
-                      +91 731 987 321, +91 98765 43210
-                    </td>
-                    <td>225 / 18</td>
-                    <td><b>103</b>/500 mb</td>
-                    <td>Active</td>
-                    <td>
-                      <i class="fa-solid fa-eye"></i
-                      ><a href="" class="table-icon-text">View</a>
-                    </td>
+                  <tr class="border-bottom" id="table-2">
+                
                   </tr>
-                  <tr class="border-bottom">
-                    <td>
-                      <img src="/assets/table-2.png" class="schools-logo" />
-                    </td>
-                    <td>Golden International School</td>
-                    <td>
-                      Goldeninternationalschool@email.com<br />
-                      +91 731 987 321, +91 98765 43210
-                    </td>
-                    <td>364 / 30</td>
-                    <td><b>324</b>/500 mb</td>
-                    <td>Active</td>
-                    <td>
-                      <i class="fa-solid fa-eye"></i
-                      ><a href="" class="table-icon-text">View</a>
-                    </td>
+                  <tr class="border-bottom" id="table-3">
+                
                   </tr>
                 </tbody>
               </table>
@@ -308,11 +213,13 @@
     </main>
     <script>
       function myfunc() {
-        alert("I got CLicked");
+        alert("I got Clicked");
       }
     </script>
-    <script src="/charts/bar-chart.js"></script>
-    <script src="/charts/pie-chart.js"></script>
+    <script type="module" src="/charts/bar-chart.js"></script>
+    <script  src="/charts/pie-chart.js"></script>
     <script src="/js/dashboard.js"></script>
+    <script type="module" src="/js/dashboard_data.js"></script>
+    <script type="module" src="../js/table_data.js"></script>
   </body>
 </html>

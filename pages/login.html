@@ -22,15 +22,15 @@
                 <p>Enter your email address and password to get access your account.</p>
 
             </div>
-            <form name="login-form" onsubmit="return validateForm()" novalidate>
-                <div class="card-input-1">
+            <form name="login-form" onsubmit="validateForm(event)" novalidate>
+                <div class="card-input-1"> 
                     
                         <div class="input-box mb-3">
                           <div class="email-pass-logo">
                             <img class="Input-icon" src="/assets/email.svg" alt=""/> 
                           </div>
                           <div class="form-floating">
-                            <input type="email" name='email' class="form-control" id="floatingInput" placeholder="Email" autofocus required onkeyup="validateForm()">
+                            <input type="email" name='email' class="form-control" id="floatingInput" placeholder="Email" autofocus required onkeyup="validateEmail()">
                             <label for="floatingInput">Email address</label>
                           </div>
                         </div>
@@ -40,7 +40,7 @@
                             <img src="/assets/padlock.svg" alt="" class="pass-icon">
                         </div>
                         <div class="form-floating password">
-                            <input type="password" name="password" class="form-control password" id="floatingPassword" placeholder="Password" required>
+                            <input type="password" name="password" class="form-control password" id="floatingPassword" placeholder="Password" onkeyup="validatePassword()">
                             <label for="floatingPassword">Password</label>
                         </div>
                         <div class="email-pass-logo eye-logo">
@@ -48,7 +48,9 @@
                         </div>
                     </div>
                     
+                    
                 </div>
+                <b><small id="err2" class="err"></small></b>
                 <div class="remember">  
                 <div>
                     <input class="form-check-input shadow-none rounded-circle" name="checkbox" type="checkbox" value="" id="defaultCheck1">

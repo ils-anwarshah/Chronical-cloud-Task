@@ -1,2 +1,2 @@
 # Chronical-cloud-Task
-This is simple chronical cloud task giver by vikalp sir.
+This is simple chronicle cloud task given by vikalp sir.
